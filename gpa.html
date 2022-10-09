@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPA calculation</title>
+    <script>
+      function calc() {
+        var gpa;
+        var c1, c2, c3, c4, c5, c6, c7, c8, sum, sum1;
+        var v1, v2, v3, v4, v5, v6, v7, v8;
+        c1 = parseInt(document.getElementById("1").value);
+        c2 = parseInt(document.getElementById("2").value);
+        c3 = parseInt(document.getElementById("3").value);
+        c4 = parseInt(document.getElementById("4").value);
+        c5 = parseInt(document.getElementById("5").value);
+        c6 = parseInt(document.getElementById("6").value);
+        c7 = parseInt(document.getElementById("7").value);
+        c8 = parseInt(document.getElementById("8").value);
+        var s1 = document.getElementById("g1").value;
+        if (s1 == "O") {
+          v1 = 10;
+        } else if (s1 == "A+") {
+          v1 = 9;
+        } else if (s1 == "A") {
+          v1 = 8;
+        } else if (s1 == "B+") {
+          v1 = 7;
+        } else if (s1 == "B") {
+          v1 = 6;
+        } else {
+          v1 = 0;
+        }
+        var s2 = document.getElementById("g2").value;
+        if (s2 == "O") {
+          v2 = 10;
+        } else if (s2 == "A+") {
+          v2 = 9;
+        } else if (s2 == "A") {
+          v2 = 8;
+        } else if (s2 == "B+") {
+          v2 = 7;
+        } else if (s2 == "B") {
+          v2 = 6;
+        } else {
+          v2 = 0;
+        }
+        var s3 = document.getElementById("g3").value;
+        if (s3 == "O") {
+          v3 = 10;
+        } else if (s3 == "A+") {
+          v3 = 9;
+        } else if (s3 == "A") {
+          v3 = 8;
+        } else if (s3 == "B+") {
+          v3 = 7;
+        } else if (s3 == "B") {
+          v3 = 6;
+        } else {
+          v3 = 0;
+        }
+        var s4 = document.getElementById("g4").value;
+        if (s4 == "O") {
+          v4 = 10;
+        } else if (s4 == "A+") {
+          v4 = 9;
+        } else if (s4 == "A") {
+          v4 = 8;
+        } else if (s4 == "B+") {
+          v4 = 7;
+        } else if (s4 == "B") {
+          v4 = 6;
+        } else {
+          v4 = 0;
+        }
+        var s5 = document.getElementById("g5").value;
+        if (s5 == "O") {
+          v5 = 10;
+        } else if (s5 == "A+") {
+          v5 = 9;
+        } else if (s5 == "A") {
+          v5 = 8;
+        } else if (s5 == "B+") {
+          v5 = 7;
+        } else if (s5 == "B") {
+          v5 = 6;
+        } else {
+          v5 = 0;
+        }
+        var s6 = document.getElementById("g6").value;
+        if (s6 == "O") {
+          v6 = 10;
+        } else if (s6 == "A+") {
+          v6 = 9;
+        } else if (s6 == "A") {
+          v6 = 8;
+        } else if (s6 == "B+") {
+          v6 = 7;
+        } else if (s6 == "B") {
+          v6 = 6;
+        } else {
+          v6 = 0;
+        }
+        var s7 = document.getElementById("g7").value;
+        if (s7 == "O") {
+          v7 = 10;
+        } else if (s7 == "A+") {
+          v7 = 9;
+        } else if (s7 == "A") {
+          v7 = 8;
+        } else if (s7 == "B+") {
+          v7 = 7;
+        } else if (s7 == "B") {
+          v7 = 6;
+        } else {
+          v7 = 0;
+        }
+        var s8 = document.getElementById("g8").value;
+        if (s8 == "O") {
+          v8 = 10;
+        } else if (s8 == "A+") {
+          v8 = 9;
+        } else if (s8 == "A") {
+          v8 = 8;
+        } else if (s8 == "B+") {
+          v8 = 7;
+        } else if (s8 == "B") {
+          v8 = 6;
+        } else {
+          v8 = 0;
+        }
+        sum =
+          c1 * v1 +
+          c2 * v2 +
+          c3 * v3 +
+          c4 * v4 +
+          c5 * v5 +
+          c6 * v6 +
+          c7 * v7 +
+          c8 * v8;
+        sum1 = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8;
+        gpa = sum / sum1;
+        var GPA = gpa.toFixed(2);
+        document.write(
+          "<!DOCTYPE html><html><head><style>h2 {color: rgb(14, 181, 228);font-size: large;}button {width: 150px;height: auto;padding: 5px;padding-bottom: 5px;font-weight: bold;font-style: italic;background-color: orangered;color: black;border-radius: 5px;border: none;font-size: large;}</style></head><body bgcolor='yellow'><center><h2>Your CGPA is: " +
+            GPA +
+            "</h2><button><a href='gpa.html'>Back👈</a></button></center></body></html>"
+        );
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body bgcolor="powderblue">
+    <center>
+      <h2 style="color: white" class="th">GPA calculation</h2>
+
+      <form action="gpa">
+        <fieldset>
+          <legend><h3>GPA Calculation</h3></legend>
+          <h4 style="color: red; font-style: times new roman; text-align: left">
+            *If Grade is RA GPA could not be generated
+          </h4>
+          <label for="nosub">semester:</label>
+          <input type="text" />
+          <br />
+          <br />
+          <table border="2px">
+            <tr>
+              <th>COURSE</th>
+              <th>CREDITS</th>
+              <th>GRADE</th>
+            </tr>
+            <tr>
+              <td>course 1</td>
+              <td>
+                <input type="number" id="1" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g1" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 2</td>
+              <td>
+                <input type="number" id="2" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g2" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 3</td>
+              <td>
+                <input type="number" id="3" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g3" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 4</td>
+              <td>
+                <input type="number" id="4" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g4" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 5</td>
+              <td>
+                <input type="number" id="5" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g5" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 6</td>
+              <td>
+                <input type="number" id="6" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g6" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 7</td>
+              <td>
+                <input type="number" id="7" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g7" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>course 8</td>
+              <td>
+                <input type="number" id="8" width="100%" class="num" />
+              </td>
+              <td>
+                <select id="g8" class="grades">
+                  <option>select</option>
+                  <option>O</option>
+                  <option>A+</option>
+                  <option>A</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>RA</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <br /><br />
+          <input type="reset" value="Reset" class="set" />
+          <button type="submit" onclick="calc()">Generate GPA</button>
+        </fieldset>
+      </form>
+      <br /><br />
+      <button>
+        <a href="index.html" style="text-decoration: none; color: black">
+          Back👈</a
+        >
+      </button>
+      <br /><br />
+    </center>
+  </body>
+</html>
